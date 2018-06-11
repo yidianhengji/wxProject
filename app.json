@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e3393c",
+    "navigationBarTitleText": "志愿者服务平台",
+    "navigationBarTextStyle":"#fff"
+  }
+}

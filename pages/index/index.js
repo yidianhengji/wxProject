@@ -17,9 +17,9 @@ Page({
     ]
   },
   //事件处理函数
-  bindViewTap: function() {
+  clickIndexView: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../list/list'
     })
   },
   clickTelUser: function(){

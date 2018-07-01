@@ -4,7 +4,7 @@
     <image src="../image/banner1.jpg"></image>
   </view>
   <view class="listContainer">
-    <view wx:for="{{dataList}}" wx:for-index="index" wx:for-item="item">
+    <view wx:for="{{dataList}}" wx:for-index="index" wx:for-item="item" bindtap="clickIndexView">
       <image src="{{item.url}}"></image>
       <text>{{item.title}}</text>
     </view>

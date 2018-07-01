@@ -1,0 +1,49 @@
+<view class="listContainer">
+  <view class="bannerContainer">
+    <image src="../image/banner1.jpg"></image>
+  </view>
+  <view>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+      <view
+        class="tab-item {{currentTab==0?'active':''}}"
+        data-current="0"
+        bindtap="swichNav"
+      >团队简介</view>
+      <view
+        class="tab-item {{currentTab==1?'active':''}}"
+        data-current="1"
+        bindtap="swichNav"
+      >发起项目</view>
+      <view
+        class="tab-item {{currentTab==2?'active':''}}"
+        data-current="2"
+        bindtap="swichNav"
+      >用户评价</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">
+          <view class="tabBox1">
+            <p>服务类型：<span>123</span></p>
+            <p>服务区域：<span>123</span></p>
+            <p>招募日期：<span>123</span></p>
+            <p>服务日期：<span>123</span></p>
+            <p>加入方式：<span>123</span></p>
+            <p>成立时间：<span>123</span></p>
+            <p>已加入志愿者：<span>123</span></p>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">
+          11111
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">
+          1113
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

@@ -5,7 +5,7 @@
 }
 .bannerContainer {
   width: 100%;
-  height: 215px;
+  height: 430rpx;
 }
 .bannerContainer image {
   width: 100%;

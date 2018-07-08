@@ -12,10 +12,11 @@
   height: 100%;
 }
 .listContainer {
-  border-top: 10px solid #eeeeee;
+  margin-top: 10px;
   padding: 30px 0;
   overflow: hidden;
   width: 100%;
+  background: #fff;
 }
 .listContainer > view {
   width: 33%;

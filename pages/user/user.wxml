@@ -1,0 +1,26 @@
+<view class="userContainer">
+  <view class="bannerContainer">
+    <image src="../image/user/userBg.jpg"></image>
+    <view class="settingBtn">
+      <image src="../image/user/settingAddIcon.png"></image>
+      <image src="../image/user/settingIcon.png"></image>
+    </view>
+    <view class="userPhotoBox">
+      <image src="{{userInfoList.userInfo.avatarUrl}}"></image>
+      <text>{{userInfoList.userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="userList">
+    <ul>
+      <li wx:for="{{dataList1}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-path="{{item.path}}">
+        <image src="../image/user/icon{{item.icon}}.png"></image>
+        {{item.name}}
+        <text wx-if="{{item.status}}">{{newsNum}}</text>
+      </li>
+    </ul>
+  </view>
+  <view class="telBox">
+    <text>滨湖社区服务热线</text>
+    <text>0731-77777777</text>
+  </view>
+</view>

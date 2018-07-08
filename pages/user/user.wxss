@@ -1,0 +1,130 @@
+/* pages/user/user.wxss */
+.userContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.userContainer .bannerContainer {
+  width: 100%;
+  height: 460rpx;
+  background: #e43a3d;
+  position: relative;
+}
+
+.userContainer .bannerContainer image {
+  width: 100%;
+  height: 100%;
+}
+
+.userContainer .bannerContainer .settingBtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.userContainer .bannerContainer .settingBtn image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20px;
+}
+
+.userContainer .bannerContainer .userPhotoBox {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  margin-left: -45px;
+  text-align: center;
+}
+
+.userContainer .bannerContainer .userPhotoBox image {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  margin: 2px;
+  overflow: hidden;
+}
+
+.userContainer .bannerContainer .userPhotoBox text {
+  color: #333333;
+  font-size: 32rpx;
+}
+
+.userContainer .userList {
+  margin-top: 10px;
+  background: #fff;
+}
+
+.userContainer .userList ul {
+  display: block;
+  padding: 0 15px;
+}
+
+.userContainer .userList ul li {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #cccccc;
+  color: #333333;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+}
+
+.userContainer .userList ul li:last-child {
+  border-bottom: none;
+}
+
+.userContainer .userList ul li::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 15.5px;
+  width: 7px;
+  height: 14px;
+  display: block;
+  z-index: 99;
+  background-image: url("https://file.yunji01.com/committee/000015/20180707/20180707174224132260.png");
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+}
+
+.userContainer .userList ul li text {
+  position: absolute;
+  right: 20px;
+  top: 13.5px;
+  background: #e3393c;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+}
+
+.userContainer .userList image {
+  width: 45rpx;
+  height: 45rpx;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+.telBox {
+  position: fixed;
+  bottom: 15px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.telBox text {
+  display: block;
+  color: #666666;
+  font-size: 12px;
+  line-height: 22px;
+}

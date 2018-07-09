@@ -2,3 +2,36 @@
 page{
   background: #eee;
 }
+
+/* 超出省略号 */
+.text-ov {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 按钮 */
+.btn {
+  display: inline-block;
+  width: 75px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 12.5px;
+  font-weight: 500;
+  color: #333333;
+  border: 1px solid #333333;
+}
+.btn-red {
+  color: #e3393c;
+  border-color: #e3393c;
+}
+
+/* 颜色 */
+.text-green {
+    color: #1bc6b4;
+}
+.text-red {
+    color: #e3393c;
+}

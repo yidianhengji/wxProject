@@ -1,0 +1,13 @@
+/* pages/MyEvaluate/MyEvaluate.wxss */
+@import "../wxStar/wxStar.wxss";
+
+.MyEvaluateContainer {
+
+}
+
+.wxStarBox {
+    overflow: hidden;
+}
+.wxStarBox text {
+    float: left;
+}

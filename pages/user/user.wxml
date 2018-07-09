@@ -12,7 +12,7 @@
   </view>
   <view class="userList">
     <ul>
-      <li wx:for="{{dataList1}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-path="{{item.path}}">
+      <li wx:for="{{dataList1}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-item-path="{{item.path}}" data-item-title="{{item.name}}">
         <image src="../image/user/icon{{item.icon}}.png"></image>
         {{item.name}}
         <text wx-if="{{item.status}}">{{newsNum}}</text>

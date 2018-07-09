@@ -1,0 +1,14 @@
+<!--pages/MyNews/MyNews.wxml-->
+<view class="MyNewsContainer">
+    <view class="box">
+        <text class="text-green">2018-06-20 18:00</text>
+        <view class="text-ov">环境爆出环境爆出环境爆出环境爆出</view>
+        <view>恭喜您，申请【环境保护】志愿队审核成功恭喜您，申请【环境保
+护】志愿队审核成功恭喜您，申请【环境保护】志愿队审核成功。</view>
+    </view>
+    <view class="box">
+        <text class="text-green">2018-06-20 18:00</text>
+        <view class="text-ov">环境爆出环境爆出</view>
+        <view>恭喜您，申请【环境保护】志愿队审核成功恭喜您</view>
+    </view>
+</view>

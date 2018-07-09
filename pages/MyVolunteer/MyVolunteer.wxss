@@ -1,0 +1,43 @@
+/* pages/MyVolunteer/MyVolunteer.wxss */
+.MyVolunteerContainer {
+
+}
+
+.MyVolunteerContainer .box {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px 15px;
+}
+
+.MyVolunteerContainer .box .box-body {
+    overflow: hidden;
+}
+
+.MyVolunteerContainer .box .box-body view:nth-child(2) {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.MyVolunteerContainer .box .box-body view:nth-child(3) {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.MyVolunteerContainer .box .box-body text {
+    float: right;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.MyVolunteerContainer .box .box-footer {
+    padding-top: 10px;
+    border-top: 1px solid #cccccc;
+    text-align: right;
+}
+
+.MyVolunteerContainer .box .box-footer text {
+    margin-left: 10px;
+}

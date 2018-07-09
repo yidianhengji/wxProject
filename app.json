@@ -1,8 +1,12 @@
 {
   "pages":[
+    
+    "pages/MyEvaluate/MyEvaluate",
     "pages/index/index",
     "pages/user/user",
     
+    "pages/MyVolunteer/MyVolunteer",
+    "pages/MyNews/MyNews",
     "pages/list/list"
   ],
   "window":{

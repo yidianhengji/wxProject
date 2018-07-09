@@ -1,0 +1,38 @@
+/* pages/MyNews/MyNews.wxss */
+.MyNewsContainer {
+    background: #fff;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+.MyNewsContainer .box {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px;
+}
+
+.MyNewsContainer .box:last-child {
+    border-bottom: none;
+}
+
+.MyNewsContainer .box view:nth-child(2) {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 8px;
+    
+}
+
+.MyNewsContainer .box view:nth-child(3) {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 10px;
+    max-height: 32px;
+    overflow: hidden;
+}
+
+.MyNewsContainer .box text {
+    float: right;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666666;
+}

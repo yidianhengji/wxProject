@@ -1,0 +1,32 @@
+<!--pages/MyVolunteer/MyVolunteer.wxml-->
+<view class="MyVolunteerContainer">
+    <view class="box">
+        <view class="box-body">
+            <text class="text-green">已加入</text>
+            <view>环境爆出</view>
+            <view>加入时间：56446</view>
+        </view>
+        <view class="box-footer">
+            <text class="btn btn-red" bindtap="clickEvaluate">评价</text>
+            <text class="btn btn-default" bindtap="clickForOut">申请退出</text>
+        </view>
+    </view>
+    <view class="box">
+        <view class="box-body">
+            <text class="text-green">已加入</text>
+            <view>环境爆出</view>
+            <view>加入时间：56446</view>
+        </view>
+        <view class="box-footer">
+            <text class="btn btn-red" bindtap="clickEvaluate">评价</text>
+            <text class="btn btn-default" bindtap="clickForOut">申请退出</text>
+        </view>
+    </view>
+    <view class="box">
+        <view class="box-body">
+            <text class="text-red">已退出</text>
+            <view>环境爆出</view>
+            <view>加入时间：56446</view>
+        </view>
+    </view>
+</view>

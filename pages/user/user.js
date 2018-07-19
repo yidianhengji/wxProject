@@ -10,7 +10,7 @@ Page({
         //居民
         dataList1: [
             { name: '我的志愿队', icon: '1', path: '../MyVolunteer/MyVolunteer' },
-            { name: '我的活动', icon: '6', path: '' },
+            { name: '我的活动', icon: '6', path: '../MyActivity/MyActivity' },
             { name: '我的预约', icon: '3', path: '' },
             { name: '我的消息', icon: '5', path: '../MyNews/MyNews', status: true },
         ],

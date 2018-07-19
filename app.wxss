@@ -1,6 +1,7 @@
 /**app.wxss**/
 page{
   background: #eee;
+  width: 100%;
 }
 
 /* 超出省略号 */
@@ -34,4 +35,18 @@ page{
 }
 .text-red {
     color: #e3393c;
+}
+
+/* 发布按钮红色背景 */
+.iconBtn {
+    display: block;
+    margin: 15px auto;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #e33939;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 16px;
 }

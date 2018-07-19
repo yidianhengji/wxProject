@@ -1,11 +1,11 @@
 {
   "pages":[
-    
-    "pages/MyEvaluate/MyEvaluate",
+    "pages/volunteerList/volunteerList",
     "pages/index/index",
     "pages/user/user",
-    
     "pages/MyVolunteer/MyVolunteer",
+    "pages/MyEvaluate/MyEvaluate",
+    "pages/MyActivity/MyActivity",
     "pages/MyNews/MyNews",
     "pages/list/list"
   ],

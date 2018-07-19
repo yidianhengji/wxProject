@@ -1,0 +1,15 @@
+<!--pages/volunteerList/volunteerList.wxml-->
+<view class="volunteerListContainer">
+    <view class="list">
+        <image src="../image/user/userPhoto.png"></image>
+        <view class="contern">
+            <text class="name">名称 <text>30岁</text> </text>
+            <view class="itemType">
+                <text>教育行业</text>
+                <text>在职</text>
+                <text>东一小区</text>
+            </view>
+            <text class="tims">加入时间：2018-07-05</text>
+        </view>
+    </view>
+</view>

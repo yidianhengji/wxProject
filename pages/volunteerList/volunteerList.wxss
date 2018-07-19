@@ -1,0 +1,60 @@
+/* pages/volunteerList/volunteerList.wxss */
+.volunteerListContainer {
+
+}
+
+.volunteerListContainer .list {
+    overflow: hidden;
+    padding: 10px 15px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.volunteerListContainer .list image {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.volunteerListContainer .list .contern {
+    overflow: hidden;
+}
+
+.volunteerListContainer .list .contern .name {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+}
+
+.volunteerListContainer .list .contern .name text {
+    width: 24px;
+    height: 10px;
+    line-height: 10px;
+    background: #e3393c;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px;
+}
+
+.volunteerListContainer .list .contern .itemType {
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.volunteerListContainer .list .contern .itemType text {
+    float: left;
+    width: 33%;
+    color: #666666;
+    font-size: 13px;
+}
+
+.volunteerListContainer .list .contern .tims {
+    color: #666666;
+    font-size: 12px;
+    display: block;
+}

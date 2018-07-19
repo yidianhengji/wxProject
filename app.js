@@ -41,10 +41,10 @@ App({
 
 /*
   "pages/index/index",  首页
-  
   "pages/list/list",     首页列表详情
-
   "pages/user/user",    管理中心
   "pages/MyVolunteer/MyVolunteer",   我的志愿队
+  "pages/MyEvaluate/MyEvaluate",     我的志愿队评价
+  "pages/MyActivity/MyActivity"      我参与的活动
   "pages/MyNews/MyNews", 我的消息
 */

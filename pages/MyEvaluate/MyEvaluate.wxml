@@ -6,12 +6,17 @@
         <text>评分：</text>
         <template class="dd" is="wxStar" data="{{wxStar: wxStar}}" />
     </view>
+    <view class="formBox">
+        <textarea placeholder="placeholder颜色是红色的" placeholder-style="color: #999999;"></textarea>
+    </view>
+</view>
+<view>
+    <text class="iconBtn">立即发布</text>
 </view>
 
 
 
-
-<view class='btn-panel'>
+<!-- <view class='btn-panel'>
   <button class='btn' bindtap='resetStar'>重置</button>
   <button class='btn' bindtap='alertStar'>获取当前星数</button>
-</view>
+</view> -->

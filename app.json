@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/volunteerList/volunteerList",
     "pages/index/index",
     "pages/user/user",
     "pages/MyVolunteer/MyVolunteer",
     "pages/MyEvaluate/MyEvaluate",
     "pages/MyActivity/MyActivity",
     "pages/MyNews/MyNews",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/volunteerList/volunteerList"
   ],
   "window":{
     "backgroundTextStyle":"light",

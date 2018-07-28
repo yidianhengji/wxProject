@@ -6,13 +6,6 @@ App({
         logs.unshift(Date.now())
         wx.setStorageSync('logs', logs)
 
-        // 登录
-        wx.login({
-            success: res => {
-                var code = res //返回code
-                // 发送 res.code 到后台换取 openId, sessionKey, unionId
-            }
-        })
         // 获取用户信息
         wx.getSetting({
             success: res => {
@@ -27,6 +20,55 @@ App({
                             if (this.userInfoReadyCallback) {
                                 this.userInfoReadyCallback(res)
                             }
+                            /*
+                            * 小程序自带的登录
+                            */
+                            wx.login({
+                                success: res => {
+                                    //返回code
+                                    var code = res
+                                    console.log(code)
+                                    /*
+                                    * 小程序微信授权登陆
+                                    */
+                                    wx.request({
+                                        url: this.globalData.path + 'xcxlogin/login.do', //仅为示例，并非真实的接口地址
+                                        method: 'POST',
+                                        dataType: 'json',
+                                        data: {
+                                            code: code.code,
+                                            nickName: this.globalData.userInfo.nickName,
+                                            gender: this.globalData.userInfo.gender,
+                                            avatarUrl: this.globalData.userInfo.avatarUrl,
+                                        },
+                                        header: {
+                                            //'content-type': 'application/json' // 默认值
+                                            //'Content-Type': 'application/json; charset=utf-8'
+                                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                                        },
+                                        success: function (res) {
+                                            if(res.data.status==200){
+                                                var app = getApp();
+                                                app.globalData.globalUserId = res.data.data.user_id
+                                                app.globalData.globalRole = res.data.data.role
+                                                app.globalData.globalIsAuthentication = res.data.data.is_authentication
+                                            }else {
+                                                wx.showModal({
+                                                    title: '温馨提示',
+                                                    content: res.data.msg,
+                                                    success: function (res) {
+                                                        if (res.confirm) {
+                                                            console.log('用户点击确定')
+                                                        } else {
+                                                            console.log('用户点击取消')
+                                                        }
+                                                    }
+                                                })
+                                            }
+                                        }
+                                    })
+                                }
+                            })
                         }
                     })
                 }
@@ -34,7 +76,11 @@ App({
         })
     },
     globalData: {
-        userInfo: null
+        userInfo: null,
+        path: 'http://47.106.163.198:8081/wxbacksys/',
+        globalRole: '',
+        globalUserId: '',
+        globalIsAuthentication: '',
     }
 })
 

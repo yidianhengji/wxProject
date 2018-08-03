@@ -1,15 +1,15 @@
 <!--index.wxml-->
 <view class="indexContainer">
-  <view class="bannerContainer">
-    <image src="../image/banner1.jpg"></image>
-  </view>
-  <view class="listContainer">
-    <view wx:for="{{dataList}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-item-path="{{item.path}}" data-item-title="{{item.title}}">
-      <image src="{{item.url}}"></image>
-      <text>{{item.title}}</text>
+    <view class="bannerContainer">
+        <image src="../image/banner1.jpg"></image>
     </view>
-  </view>
-  <view class="telLogo" bindtap="clickTelUser">
-      <image src="../image/telLogo.png"></image>
-  </view>
+    <view class="listContainer">
+        <view wx:for="{{dataList}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-item-path="{{item.path}}" data-item-title="{{item.title}}" data-item-uuid="{{item.uuid}}">
+            <image src="{{item.url}}"></image>
+            <text>{{item.title}}</text>
+        </view>
+    </view>
+    <view class="telLogo" bindtap="clickTelUser">
+        <image src="../image/telLogo.png"></image>
+    </view>
 </view>

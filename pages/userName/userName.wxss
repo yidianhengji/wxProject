@@ -1,0 +1,21 @@
+@import "../../utils/weui.wxss";
+
+.page-section-title {
+    margin-right: 20rpx;
+    color: #333;
+    font-size: 30rpx;
+    position: absolute;
+    left: 15rpx;
+    right: 10rpx;
+    z-index: 99;
+    display: inline-block;
+    margin-top: 20rpx;
+    width: 150rpx;
+}
+
+.tipErr {
+    color: #e3393c;
+    font-size: 30rpx;
+    line-height: 36rpx;
+    padding: 20rpx 20rpx;
+}

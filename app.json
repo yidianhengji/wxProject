@@ -1,20 +1,21 @@
 {
-  "pages":[
-    "pages/login/login",
-    "pages/index/index",
-    "pages/userName/userName",
-    "pages/user/user",
-    "pages/MyVolunteer/MyVolunteer",
-    "pages/MyEvaluate/MyEvaluate",
-    "pages/MyActivity/MyActivity",
-    "pages/MyNews/MyNews",
-    "pages/list/list",
-    "pages/volunteerList/volunteerList"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#e3393c",
-    "navigationBarTitleText": "志愿者服务平台",
-    "navigationBarTextStyle":"#fff"
-  }
+    "pages": [
+        "pages/login/login",
+        "pages/indexTeamList/indexTeamList",
+        
+        "pages/index/index",
+        "pages/userNews/userNews",
+        "pages/userName/userName",
+        "pages/user/user",
+        "pages/MyVolunteer/MyVolunteer",
+        "pages/MyEvaluate/MyEvaluate",
+        "pages/MyActivity/MyActivity",
+        "pages/indexvolunteerList/indexvolunteerList"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#e3393c",
+        "navigationBarTitleText": "志愿者服务平台",
+        "navigationBarTextStyle": "#fff"
+    }
 }

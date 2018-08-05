@@ -10,6 +10,22 @@ App({
 
         wx.login({
             success: function (code) {
+                var code = code.code;
+                console.log(code)
+
+                // wx.request({
+                //     url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx886ac99b96a07e94&secret=4c2dce496c53dc2d655822ae25bebd8b&js_code=' + code + '&grant_type=authorization_code',
+                //     data: {},
+                //     header: {
+                //         'content-type': 'application/json'
+                //     },
+                //     success: function (res) {
+                //         debugger
+                //         var openid = res.data.openid //返回openid
+                //         debugger
+                //     }
+                // })
+
                 wx.getUserInfo({
                     success: function (res) {
                         var app = getApp();
@@ -19,61 +35,56 @@ App({
                         if (app.userInfoReadyCallback) {
                             app.userInfoReadyCallback(res)
                         }
-
                         /*
-                        * 小程序自带的登录
+                        * 小程序微信授权登陆
                         */
-                        wx.login({
-                            success: res => {
-                                var code = res; //返回code
-                                /*
-                                * 小程序微信授权登陆
-                                */
-                                var app = getApp();
-                                var data = {
-                                    code: code.code,
-                                    nickName: app.globalData.userInfo.nickName,
-                                    gender: app.globalData.userInfo.gender,
-                                    avatarUrl: app.globalData.userInfo.avatarUrl,
-                                };
-                                httpRequest.request("xcxlogin/login.do", data, function(data){
-                                    var app = getApp();
-                                    if (app.globalData.globalUserId==''){
-                                        app.globalData.globalUserId = data.data.user_id
-                                    }else {
-                                        console.log("写入失败")
-                                    }
+                        var app = getApp();
+                        var data = {
+                            code: code,
+                            nickName: app.globalData.userInfo.nickName,
+                            gender: app.globalData.userInfo.gender,
+                            avatarUrl: app.globalData.userInfo.avatarUrl,
+                        };
+                        httpRequest.request("xcxlogin/login.do", data, function (data) {
+                            var app = getApp();
+                            if (app.globalData.globalUserId == '') {
+                                app.globalData.globalUserId = data.data.user_id
+                            } else {
+                                console.log("写入失败")
+                            }
 
-                                    if (app.globalData.globalRole == '') {
-                                        app.globalData.globalRole = data.data.role
-                                    } else {
-                                        console.log("写入失败")
-                                    }
+                            if (app.globalData.globalRole == '') {
+                                app.globalData.globalRole = data.data.role
+                            } else {
+                                console.log("写入失败")
+                            }
 
-                                    if (app.globalData.globalIsAuthentication == '') {
-                                        app.globalData.globalIsAuthentication = data.data.is_authentication
-                                    } else {
-                                        console.log("写入失败")
-                                    }
-                                    
-                                    if (data.data.is_authentication==2){
-                                        wx.showModal({
-                                            title: '温馨提示',
-                                            content: '您还未实名认证！请先实名认证。',
-                                            success: function (res) {
-                                                if (res.confirm) {
-                                                    wx.navigateTo({
-                                                        url: '../userName/userName'
-                                                    })
-                                                } else if (res.cancel) {
-                                                    console.log('用户点击取消')
-                                                }
-                                            }
-                                        })
+                            if (app.globalData.globalIsAuthentication == '') {
+                                app.globalData.globalIsAuthentication = data.data.is_authentication
+                            } else {
+                                console.log("写入失败")
+                            }
+
+                            if (data.data.is_authentication == "2") {
+                                wx.showModal({
+                                    title: '温馨提示',
+                                    content: '您还未实名认证！请先实名认证。',
+                                    success: function (res) {
+                                        if (res.confirm) {
+                                            wx.navigateTo({
+                                                url: '../userName/userName'
+                                            })
+                                        } else if (res.cancel) {
+                                            console.log('用户点击取消')
+                                        }
+                                    },
+                                    fail: function (res) {
+                                        console.log("")
                                     }
                                 })
                             }
                         })
+
                     }
                 });
             }

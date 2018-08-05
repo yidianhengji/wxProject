@@ -1,0 +1,75 @@
+<!--pages/MyNews/MyNews.wxml-->
+<view>
+    <view class="MyNewsContainer" wx:if="{{dataList.length>0}}">
+        <view class="box">
+            <text class="text-green">2018-06-20 18:00</text>
+            <view class="text-ov">环境爆出环境爆出环境爆出环境爆出</view>
+            <view>恭喜您，申请【环境保护】志愿队审核成功恭喜您，申请【环境保
+    护】志愿队审核成功恭喜您，申请【环境保护】志愿队审核成功。</view>
+        </view>
+        <view class="box">
+            <text class="text-green">2018-06-20 18:00</text>
+            <view class="text-ov">环境爆出环境爆出</view>
+            <view>恭喜您，申请【环境保护】志愿队审核成功恭喜您</view>
+        </view>
+    </view>
+    <view class="Nodata" wx:else>
+        暂无数据
+    </view>
+</view>
+
+
+
+
+<!-- 十一.消息
+1.查询我的信息
+url:/wxbacksys/message/queryMessageList.do
+参数：pageSize (每页显示多少条)
+      pageNum	(显示第几页)
+返回：{
+    "status": 200,
+    "msg": "",
+    "data": [
+        {
+            "update_time": "2018-07-03 15:58:01",   (修改时间)
+            "flag": 1,                               状态（1：未读 2：已读）
+            "create_time": "2018-07-03 15:58:01",    （创建时间）
+            "user_id": "153023746011592",             （用户id）
+            "title": "志愿者退出申请",                (标题)
+            "uuid": "153060468179280",                 （消息id）
+            "content": "对不起，环境保护志愿者团队拒绝了您的申请！" (消息内容)
+        }
+    ],
+    "total": 4, （总条数）
+    "pages": 4  （总页数）
+}
+
+2.查询消息列表详情
+url:/wxbacksys/message/queryMessage.do
+参数：uuid （消息id）
+返回：{
+    "status": 200,
+    "msg": "",
+    "data": {
+        "update_time": "2018-07-03 15:58:01",   (修改时间)
+        "flag": 1,                              状态（1：未读 2：已读）
+        "create_time": "2018-07-03 15:58:01",   （创建时间）
+        "user_id": "153023746011592",            （用户id）
+        "title": "志愿者退出申请",                (标题)
+        "uuid": "153060468179280",                  （消息id）
+        "content": "对不起，环境保护志愿者团队拒绝了您的申请！"   (消息内容)
+    },
+    "total": 0,
+    "pages": 0
+}
+
+3.消息修改为已读
+url:/wxbacksys/message/updateMessageForRead.do
+参数:uuid (消息id)
+返回：{
+    "status": 200,
+    "msg": "",
+    "data": 1,
+    "total": 0,
+    "pages": 0
+} -->

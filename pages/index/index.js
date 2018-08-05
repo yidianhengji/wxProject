@@ -12,7 +12,7 @@ Page({
             { "title": "科创园地", "uuid": "153049726659970", "url": "../image/indexListIcon/icon4.png", "path": "../list/list" },
             { "title": "亲子活动", "uuid": "153049728164352", "url": "../image/indexListIcon/icon5.png", "path": "../list/list" },
             { "title": "家电维修", "uuid": "153049730503275", "url": "../image/indexListIcon/icon6.png", "path": "../list/list" },
-            { "title": "志愿者列表", "uuid": "", "url": "../image/indexListIcon/icon7.png" },
+            { "title": "志愿者列表", "uuid": "", "url": "../image/indexListIcon/icon7.png", "path": "../indexvolunteerList/indexvolunteerList" },
             { "title": "预约服务", "uuid": "", "url": "../image/indexListIcon/icon8.png" },
             { "title": "管理中心", "uuid": "", "url": "../image/indexListIcon/icon9.png", "path": "../user/user" }
         ]

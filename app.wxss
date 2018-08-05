@@ -50,3 +50,10 @@ page{
     color: #ffffff;
     font-size: 16px;
 }
+
+.Nodata {
+    text-align: center;
+    padding: 50rpx 0;
+    color: #999;
+    font-size: 30rpx;
+}

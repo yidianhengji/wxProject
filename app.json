@@ -1,15 +1,17 @@
 {
     "pages": [
+        
         "pages/login/login",
         "pages/indexTeamList/indexTeamList",
-        
+        "pages/MyEvaluate/MyEvaluate",
+        "pages/MyActivity/MyActivity",
         "pages/index/index",
         "pages/userNews/userNews",
         "pages/userName/userName",
         "pages/user/user",
         "pages/MyVolunteer/MyVolunteer",
-        "pages/MyEvaluate/MyEvaluate",
-        "pages/MyActivity/MyActivity",
+        
+        
         "pages/indexvolunteerList/indexvolunteerList"
     ],
     "window": {

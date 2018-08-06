@@ -1,94 +1,93 @@
 /* pages/list/list.wxss */
+
 .listContainer {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .bannerContainer {
-  width: 100%;
-  height: 210px;
+    width: 100%;
+    height: 210px;
 }
 
 .bannerContainer image {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .tab-h {
-  height: 45px;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  line-height: 45px;
-  background: #ffffff;
-  font-size: 16px;
-  white-space: nowrap;
-  border-bottom: 1px solid #cccccc;
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 45px;
+    background: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+    border-bottom: 1px solid #ccc;
 }
 
 .tab-item {
-  display: inline-block;
-  width: 33.33%;
-  text-align: center;
-  color: #000;
-  font-weight: bold;
-  font-size: 14px;
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .tab-item.active {
-  position: relative;
+    position: relative;
 }
 
 .tab-item.active:after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 30%;
-  background: #e3393c;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  border-radius: 16rpx;
-  margin-left: -15%;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 30%;
+    background: #e3393c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 16rpx;
+    margin-left: -15%;
 }
 
 .scoll-h {
-  height: 100%;
-  background: #fff;
-  
+    height: 100%;
+    background: #fff;
 }
 
 .tabBox1 {
-  padding: 10px 15px;
-  border-bottom: 20rpx solid #eeeeee;
+    padding: 10px 15px;
+    border-bottom: 20rpx solid #eee;
 }
 
 .tabBox1 p {
-  display: block;
-  color: #333333;
-  font-size: 28rpx;
+    display: block;
+    color: #333;
+    font-size: 28rpx;
 }
 
 .tabBox1 p span {
-  color: #666666;
+    color: #666;
 }
 
-
 .listBox {
-    border-bottom: 20rpx solid #eeeeee;
+    border-bottom: 20rpx solid #eee;
     background: #fff;
     padding: 20rpx 30rpx;
 }
 
 .listBox-hade {
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
     padding-bottom: 20rpx;
 }
 
 .listBox-hade text {
     border-left: 6rpx solid #e33939;
-    color: #333333;
+    color: #333;
     font-weight: 600;
     font-size: 30rpx;
     padding-left: 15rpx;
@@ -100,7 +99,7 @@
 }
 
 .listBox-body .text {
-    color: #333333;
+    color: #333;
     font-size: 28rpx;
     line-height: 40rpx;
     text-indent: 2em;
@@ -116,7 +115,7 @@
     box-sizing: border-box;
 }
 
-.btnBox text {
+.btnBox view {
     color: #fff;
     font-size: 36rpx;
     width: 48%;
@@ -124,17 +123,118 @@
     height: 80rpx;
     line-height: 80rpx;
     text-align: center;
-    background: #27ccaa;
+    background: #43aaff;
     box-sizing: border-box;
     border-radius: 40rpx;
     float: left;
     margin-right: 4%;
+    overflow: hidden;
 }
 
-.btnBox text:last-child {
+.btnBox view:first-child image {
+    width: 30rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+}
+
+.btnBox view:last-child {
     margin-right: 0px;
 }
 
 .addView {
-    background: #43aaff;
+    background: #e33939 !important;
+}
+
+.addView2 {
+    background: #666 !important;
+}
+
+.addView3 {
+    background: #999 !important;
+}
+
+.item-ans-contern {
+    overflow: hidden;
+    padding: 20rpx;
+    border-bottom: 1px solid #ccc;
+}
+
+.avatar {
+    width: 120px;
+    height: 90px;
+    position: relative;
+    padding-right: 10px;
+    border-radius: 10rpx;
+    overflow: hidden;
+    float: left;
+}
+
+.avatar .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12rpx;
+}
+
+.avatar .doyen {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    bottom: -2px;
+    right: 20rpx;
+}
+
+.expertInfo {
+    font-size: 12px;
+    flex-grow: 2;
+    color: #666;
+    line-height: 1.5em;
+}
+
+.tag, .answerHistory {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.expertInfo .name {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 36px;
+}
+
+.expertInfo image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.itemBox3 {
+    padding: 20rpx;
+}
+
+.itemBox3 .btnsAdd {
+    border: 1px solid #e33939;
+    width: 340rpx;
+    height: 76rpx;
+    margin: 0 auto;
+    border-radius: 38rpx;
+    text-align: center;
+    line-height: 76rpx;
+    color: #e33939;
+    font-size: 32rpx;
+}
+
+.itemBox3 .btnsAdd image {
+    width: 32rpx;
+    height: 29rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10rpx;
+    margin-top: -5rpx;
 }

@@ -49,18 +49,58 @@
             </swiper-item>
             <swiper-item>
                 <scroll-view scroll-y="true" class="scoll-h">
-                    11111
+                    <view class="item-ans">
+                        <view class="item-ans-contern">
+                            <view class="avatar">
+                                <image class="img" src="../image/bg1.png"></image>
+                            </view>
+                            <view class="expertInfo">
+                                <view class="name">滨湖湘江之水保护公益活动,滨湖湘
+    江之水保护公益活动</view>
+                                <view class="tag">
+                                    <image class="img" src="../image/times.png"></image>
+                                    知名情感博主
+                                </view>
+                                <view class="answerHistory">
+                                    <image class="img" src="../image/place.png"></image>
+                                    河西商业广场河西商业广场河西商业广场河西商业广场
+                                </view>
+                            </view>
+                        </view>
+                        <view class="item-ans-contern">
+                            <view class="avatar">
+                                <image class="img" src="../image/bg1.png"></image>
+                            </view>
+                            <view class="expertInfo">
+                                <view class="name">滨湖湘江之水保护公益活动,滨湖湘
+    江之水保护公益活动</view>
+                                <view class="tag">
+                                    <image class="img" src="../image/times.png"></image>
+                                    知名情感博主
+                                </view>
+                                <view class="answerHistory">
+                                    <image class="img" src="../image/place.png"></image>
+                                    河西商业广场河西商业广场河西商业广场河西商业广场
+                                </view>
+                            </view>
+                        </view>
+                    </view>
                 </scroll-view>
             </swiper-item>
             <swiper-item>
                 <scroll-view scroll-y="true" class="scoll-h">
-                    1113
+                    <view class="itemBox3">
+                        <view class="btnsAdd"><image src="../image/comment.png"></image>发表评论</view>
+                        
+                    </view>
                 </scroll-view>
             </swiper-item>
         </swiper>
     </view>
     <view class="btnBox">
-        <text bindtap="clickAddBtn" class="addView">预约服务</text>
-        <text bindtap="clickAddBtn">立即报名</text>
+        <view bindtap="clickAddBtn"><image src="../image/btnAddIcon.png"></image>预约服务</view>
+        <!-- <view bindtap="clickAddBtn" class="addView">我要申请志愿者</view> -->
+        <view bindtap="clickAddBtn" class="addView2">已结束</view>
+        <!-- <view bindtap="clickAddBtn" class="addView3">暂未开始</view> -->
     </view>
 </view>

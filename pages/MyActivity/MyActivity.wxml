@@ -6,7 +6,7 @@
         <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">审核中</view>
         <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">审核失败</view>
     </scroll-view>
-    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}px">
         <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}">
             <scroll-view scroll-y="true" class="scoll-h">
                 <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
@@ -30,9 +30,6 @@
                         </view>
                         <!-- 审核失败 -->
                         <!-- <view class="tabbar4">您的身份不符合要求</view> -->
-                    </view>
-                    <view class="tabbar2">
-                        <text class="btn btn-red" bindtap="clickEvaluate">评价</text>
                     </view>
                 </block>
             </scroll-view>

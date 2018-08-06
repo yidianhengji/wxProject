@@ -12,14 +12,14 @@ Page({
             { name: '我的志愿队', icon: '1', path: '../MyVolunteer/MyVolunteer' },
             { name: '我的活动', icon: '6', path: '../MyActivity/MyActivity' },
             { name: '我的预约', icon: '3', path: '' },
-            { name: '我的消息', icon: '5', path: '../MyNews/MyNews', status: true },
+            { name: '我的消息', icon: '5', path: '../userNews/userNews', status: true },
         ],
         //志愿服务队
         dataList2: [
             { name: '志愿队管理', icon: '1', path: '' },
             { name: '活动管理', icon: '6', path: '' },
             { name: '预约服务管理', icon: '3', path: '' },
-            { name: '我的消息', icon: '5', path: '../MyNews/MyNews', status: true },
+            { name: '我的消息', icon: '5', path: '../userNews/userNews', status: true },
         ],
         //社区管理员
         dataList3: [
@@ -27,7 +27,7 @@ Page({
             { name: '居民信息管理', icon: '2', path: '' },
             { name: '预约服务管理', icon: '3', path: '' },
             { name: '评价管理', icon: '4', path: '' },
-            { name: '我的消息', icon: '5', path: '', status: true },
+            { name: '我的消息', icon: '5', path: '../userNews/userNews', status: true },
         ],
         //消息记录
         newsNum: '2',

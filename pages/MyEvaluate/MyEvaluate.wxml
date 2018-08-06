@@ -7,7 +7,7 @@
         <template class="dd" is="wxStar" data="{{wxStar: wxStar}}" />
     </view>
     <view class="formBox">
-        <textarea placeholder="placeholder颜色是红色的" placeholder-style="color: #999999;"></textarea>
+        <textarea placeholder="写点什么吧！" placeholder-style="color: #999999;"></textarea>
     </view>
 </view>
 <view>

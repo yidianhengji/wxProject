@@ -1,3 +1,5 @@
+var httpRequest = require('../../utils/request.js');
+
 var app = getApp();
 Page({
     data: {
@@ -22,6 +24,12 @@ Page({
             })
         }
     },
+    //申请志愿者
+    addVolunteer(){
+        wx.navigateTo({
+            url: '../indexAddVolunteer/indexAddVolunteer'
+        })
+    },
     onLoad: function (options) {
         //设置标题
         wx.setNavigationBarTitle({
@@ -36,6 +44,10 @@ Page({
                 });
             }
         })
+
+        httpRequest.requestHeader("volunteerTeam/queryVolunteerTeamByType.do", { type: options.uuid}, function (data) {
+            console.log(data.data)
+        });
 
     }
 })

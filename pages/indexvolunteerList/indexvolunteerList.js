@@ -1,4 +1,5 @@
-// pages/volunteerList/volunteerList.js
+var httpRequest = require('../../utils/request.js');
+
 Page({
 
   /**

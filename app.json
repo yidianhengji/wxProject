@@ -1,6 +1,6 @@
 {
     "pages": [
-        
+        "pages/indexAddVolunteer/indexAddVolunteer",
         "pages/login/login",
         "pages/indexTeamList/indexTeamList",
         "pages/MyEvaluate/MyEvaluate",

@@ -1,0 +1,95 @@
+<view class="page">
+    <view class="page__bd">
+        <form bindsubmit="submitForm">
+            <view class="weui-cells__title">请填写相关资料以进行身份认证</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">姓名</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name="name" value="{{ form.name }}" class="weui-input" type="text" placeholder="请输入姓名" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">性别</view>
+                    </view>
+                    <view class="weui-cell__bd" style="padding: 10px 0;">
+                        <radio-group class="radio-group" bindchange="bindSexChange">
+                            <label class="radio" wx:for="{{sex}}">
+                                <radio name="identity" value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+                            </label>
+                        </radio-group>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">出生年月</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker name="date" mode="date" bindchange="bindDateChange" start="2015-09-01" end="2017-09-01" value="{{ form.date }}">
+                            <view class="weui-select weui-select_in-select-after">{{ form.date }}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">教育程度</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker name="educational_level" bindchange="bindEducationChange" value="{{ form.educational_level}}" range="{{ educational_level }}">
+                            <view class="weui-select weui-select_in-select-after">{{ educational_level[form.educational_level] }}</view>
+                        </picker>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cells__title">请选择身份信息以更快通过审核</view>
+            <view class="weui-cells weui-cells_after-title">
+                <!-- <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__bd" style="padding: 10px 0; text-align: center;">
+                        <radio-group class="radio-group">
+                            <label class="radio" wx:for="{{identity}}" wx:key="index" bindtap="swichNav">
+                                <radio name="identity" value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+                            </label>
+                        </radio-group>
+                    </view>
+                </view> -->
+
+                <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+                    <radio-group class="radio-group" bindtap="bindIdentityChange">
+                        <label class="radio" bindtap="swichNav" data-current="0">
+                            <radio name="identity" value="1" checked="checked" />学生
+                        </label>
+                        <label class="radio" bindtap="swichNav" data-current="1">
+                            <radio name="identity" value="2" />在职
+                        </label>
+                        <label class="radio" bindtap="swichNav" data-current="2">
+                            <radio name="identity" value="3" />待业
+                        </label>
+                        <label class="radio" bindtap="swichNav" data-current="3">
+                            <radio name="identity" value="4" />其它
+                        </label>
+                    </radio-group>
+                </scroll-view>
+                <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab">
+                    <swiper-item>
+                        1
+                    </swiper-item>
+                    <swiper-item>
+                        2
+                    </swiper-item>
+                    <swiper-item>
+                        3
+                    </swiper-item>
+                    <swiper-item>
+                        4
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view class="button-sp-area">
+                <button class="weui-btn" type="primary" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>

@@ -91,7 +91,6 @@
                 <scroll-view scroll-y="true" class="scoll-h">
                     <view class="itemBox3">
                         <view class="btnsAdd"><image src="../image/comment.png"></image>发表评论</view>
-                        
                     </view>
                 </scroll-view>
             </swiper-item>
@@ -99,8 +98,8 @@
     </view>
     <view class="btnBox">
         <view bindtap="clickAddBtn"><image src="../image/btnAddIcon.png"></image>预约服务</view>
-        <!-- <view bindtap="clickAddBtn" class="addView">我要申请志愿者</view> -->
-        <view bindtap="clickAddBtn" class="addView2">已结束</view>
+        <view bindtap="addVolunteer" class="addView">我要申请志愿者</view>
+        <!-- <view bindtap="clickAddBtn" class="addView2">已结束</view> -->
         <!-- <view bindtap="clickAddBtn" class="addView3">暂未开始</view> -->
     </view>
 </view>

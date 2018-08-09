@@ -1,0 +1,60 @@
+/* pages/userMake/index.wxss */
+.__userMake {
+
+}
+
+.list {
+    background: #fff;
+    padding: 0 30rpx;
+    margin-bottom: 10px;
+}
+
+.list > view {
+    overflow: hidden;
+    padding: 20rpx 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.list > view:last-child {
+    border-bottom: 0px;
+}
+
+.list > view > view:nth-child(1) {
+    color: #333333;
+    font-size: 28rpx;
+    float: left;
+    width: 50%;
+}
+
+.list > view > view:nth-child(2) {
+    color: #333333;
+    font-size: 24rpx;
+    float: left;
+    width: 50%;
+}
+
+.text-green {
+    color: #1bc6b4 !important;
+    font-size: 24rpx;
+}
+
+.text-red {
+    color: #e3393c !important;
+    font-size: 24rpx;
+}
+
+.btns {
+    text-align: right;
+}
+
+.btns text {
+    width: 150rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    color: #e3393c;
+    font-size: 24rpx;
+    border-radius: 25rpx;
+    border: 1px solid #e3393c;
+    display: inline-block;
+}

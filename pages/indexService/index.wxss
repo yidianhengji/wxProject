@@ -1,0 +1,4 @@
+/* pages/indexAddVolunteer/indexAddVolunteer.wxss */
+
+@import '../../utils/weui.wxss';
+@import '../../utils/skyvow.wxss';

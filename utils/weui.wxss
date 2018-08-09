@@ -152,14 +152,16 @@ icon {
   padding-bottom: 0;
 }
 .weui-label {
-  width: 105px;
+  width: 130px;
   word-wrap: break-word;
   word-break: break-all;
+  font-size: 30rpx;
 }
 .weui-input {
-  height: 2.58823529em;
-  min-height: 2.58823529em;
-  line-height: 2.58823529em;
+  height: 90rpx;
+  min-height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
 }
 .weui-toptips {
   position: fixed;
@@ -240,6 +242,14 @@ icon {
   color: #D9D9D9;
   left: 15px;
 }
+
+.radio-group {
+
+}
+
+.radio-group label {
+    font-size: 30rpx;
+}
 .weui-form-preview__bd {
   padding: 10px 15px;
   font-size: .9em;
@@ -319,10 +329,11 @@ icon {
   position: relative;
   padding-left: 15px;
   padding-right: 30px;
-  height: 2.58823529em;
-  min-height: 2.58823529em;
-  line-height: 2.58823529em;
+  height: 90rpx;
+  min-height: 90rpx;
+  line-height: 90rpx;
   border-right: 1rpx solid #D9D9D9;
+  font-size: 28rpx;
 }
 .weui-select:before {
   content: " ";

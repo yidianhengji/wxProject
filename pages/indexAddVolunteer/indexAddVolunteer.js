@@ -5,12 +5,23 @@ const App = getApp()
 Page({
     data: {
         currentTab: 0, //预设当前项的值
+        heightBox: '88px',
         form: {
             name: '',
-            sex: '',
+            sex: '1',
             date: '',
             educational_level: '',
-            identity: '',
+            identity: '0',
+            school_name1: '',
+            major_class1: '',
+            industry1: '',
+            school_name2: '',
+            major_class2: '',
+            industry2: '',
+            is_duty: '1',
+            service_time: '1',
+            phone: '',
+            domicile: ''
         },
         sex: [
             { name: '男', value: '1', checked: 'true' },
@@ -22,28 +33,43 @@ Page({
             '本科',
             '本科以上'
         ],
-        // identity: [
-        //     { name: '学生', value: '1', checked: 'true' },
-        //     { name: '在职', value: '2' },
-        //     { name: '待业', value: '3' },
-        //     { name: '其它', value: '4' },
-        // ]
+        is_duty: [
+            { name: '有', value: '1', checked: 'true' },
+            { name: '否', value: '2' },
+        ],
+        service_time: [
+            { name: '工作日', value: '1', checked: 'true' },
+            { name: '周末', value: '2' },
+        ],
     },
-    switchTab: function (e) {
-        this.setData({
-            currentTab: e.detail.current
-        });
-        //this.checkCor();
-    },
-    // 点击标题切换当前页时改变样式
+    
+    // 身份切换
     swichNav: function (e) {
         var up = "form.identity";
         var cur = e.target.dataset.current;
+        if (cur==0){
+            this.setData({
+                heightBox: "88px",
+            })
+        } else if (cur == 1){
+            this.setData({
+                heightBox: "44px",
+            })
+        } else if (cur == 2) {
+            this.setData({
+                heightBox: "0px",
+            })
+        } else if (cur == 3) {
+            this.setData({
+                heightBox: "132px",
+            })
+        }
         if (this.data.currentTaB == cur) {
             return false;
         }else {
             this.setData({
                 currentTab: cur,
+                [up]: cur
             })
         }
     },
@@ -66,6 +92,19 @@ Page({
         var up = "form.educational_level";
         this.setData({
             [up]: e.detail.value,
+        })
+    },
+    //是否曾参与义务服务
+    bindIsdutyChange: function(e){
+        var up = "form.is_duty";
+        this.setData({
+            [up]: e.detail.value,
+        })
+    },
+    //志愿者须知
+    addVolunteerNotes: function(){
+        wx.navigateTo({
+            url: '../indexAddNotes/index'
         })
     },
     onLoad() {
@@ -100,25 +139,32 @@ Page({
             name: {
                 required: true,
             },
-            sex: {
-                required: true,
-            },
             date: {
                 required: true,
             },
+            phone: {
+                required: true,
+                tel: true
+            },
+            domicile: {
+                required: true
+            }
         }
         // 验证字段的提示信息，若不传则调用默认的信息
         const messages = {
             name: {
                 required: '请输入姓名',
             },
-            sex: {
-                required: '请选择性别',
-            },
             date: {
                 required: '请选择时间',
+            },
+            phone: {
+                required: '请输入联系方式',
+                tel: '请输入正确的联系方式'
+            },
+            domicile: {
+                required: '请输入居住地址',
             }
-            
         }
         // 创建实例对象
         this.WxValidate = new WxValidate(rules, messages)

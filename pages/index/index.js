@@ -13,7 +13,7 @@ Page({
             { "title": "亲子活动", "uuid": "153049728164352", "url": "../image/indexListIcon/icon5.png", "path": "../indexTeamList/indexTeamList" },
             { "title": "家电维修", "uuid": "153049730503275", "url": "../image/indexListIcon/icon6.png", "path": "../indexTeamList/indexTeamList" },
             { "title": "志愿者列表", "uuid": "", "url": "../image/indexListIcon/icon7.png", "path": "../indexvolunteerList/indexvolunteerList" },
-            { "title": "预约服务", "uuid": "", "url": "../image/indexListIcon/icon8.png" },
+            { "title": "预约服务", "uuid": "", "url": "../image/indexListIcon/icon8.png", "path": "../indexService/index" },
             { "title": "管理中心", "uuid": "", "url": "../image/indexListIcon/icon9.png", "path": "../user/user" }
         ]
     },

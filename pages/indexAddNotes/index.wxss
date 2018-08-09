@@ -1,0 +1,19 @@
+/* pages/indexAddNotes/index.wxss */
+.__indexAddNotes {
+    background: #fff;
+    padding: 15rpx 30rpx;
+}
+
+.title {
+    color: #333333;
+    font-size: 30rpx;
+    font-weight: 600;
+    margin: 10rpx 0;
+}
+
+.title1, .title2 {
+    color: #333333;
+    font-size: 30rpx;
+    font-weight: 500;
+    line-height: 50rpx;
+}

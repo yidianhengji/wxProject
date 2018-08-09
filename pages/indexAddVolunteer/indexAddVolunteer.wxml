@@ -46,48 +46,137 @@
             </view>
             <view class="weui-cells__title">请选择身份信息以更快通过审核</view>
             <view class="weui-cells weui-cells_after-title">
-                <!-- <view class="weui-cell weui-cell_select">
-                    <view class="weui-cell__bd" style="padding: 10px 0; text-align: center;">
-                        <radio-group class="radio-group">
-                            <label class="radio" wx:for="{{identity}}" wx:key="index" bindtap="swichNav">
-                                <radio name="identity" value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
-                            </label>
-                        </radio-group>
-                    </view>
-                </view> -->
-
-                <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
-                    <radio-group class="radio-group" bindtap="bindIdentityChange">
+                <scroll-view class="tab-h" >
+                    <radio-group class="radio-group" bindtap="bindIdentityChange" style="padding: 10px 0; text-align: center;">
                         <label class="radio" bindtap="swichNav" data-current="0">
-                            <radio name="identity" value="1" checked="checked" />学生
+                            <radio name="identity" value="1" bindtap="swichNav" data-current="0" checked="checked" />学生
                         </label>
                         <label class="radio" bindtap="swichNav" data-current="1">
-                            <radio name="identity" value="2" />在职
+                            <radio name="identity" value="2" bindtap="swichNav" data-current="1" />在职
                         </label>
                         <label class="radio" bindtap="swichNav" data-current="2">
-                            <radio name="identity" value="3" />待业
+                            <radio name="identity" value="3" bindtap="swichNav" data-current="2" />待业
                         </label>
                         <label class="radio" bindtap="swichNav" data-current="3">
-                            <radio name="identity" value="4" />其它
+                            <radio name="identity" value="4" bindtap="swichNav" data-current="3" />其它
                         </label>
                     </radio-group>
                 </scroll-view>
-                <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab">
-                    <swiper-item>
-                        1
+                <swiper class="tab-content" current="{{currentTab}}" duration="" style="background: transparent; height: {{heightBox}};">
+                    <swiper-item style="background: transparent; height: 150px;">
+                        <view class="weui-cells weui-cells_after-title">
+                            <view class="weui-cell weui-cell_input">
+                                <view class="weui-cell__hd">
+                                    <view class="weui-label">学校名称</view>
+                                </view>
+                                <view class="weui-cell__bd">
+                                    <input name="school_name1" value="{{ form.school_name1 }}" class="weui-input" type="text" placeholder="请输入学校名称" />
+                                </view>
+                            </view>
+                            <view class="weui-cell weui-cell_input">
+                                <view class="weui-cell__hd">
+                                    <view class="weui-label">专业/班级</view>
+                                </view>
+                                <view class="weui-cell__bd">
+                                    <input name="major_class1" value="{{ form.major_class1 }}" class="weui-input" type="text" placeholder="请输入专业/班级" />
+                                </view>
+                            </view>
+                        </view>
                     </swiper-item>
-                    <swiper-item>
-                        2
+                    <swiper-item style="background: transparent;">
+                        <view class="weui-cells weui-cells_after-title">
+                            <view class="weui-cell weui-cell_input">
+                                <view class="weui-cell__hd">
+                                    <view class="weui-label">所在行业</view>
+                                </view>
+                                <view class="weui-cell__bd">
+                                    <input name="industry1" value="{{ form.industry1 }}" class="weui-input" type="text" placeholder="请输入所在行业" />
+                                </view>
+                            </view>
+                        </view>
                     </swiper-item>
+                    <swiper-item></swiper-item>
                     <swiper-item>
-                        3
-                    </swiper-item>
-                    <swiper-item>
-                        4
+                        <view class="weui-cells weui-cells_after-title">
+                            <view class="weui-cell weui-cell_input">
+                                <view class="weui-cell__hd">
+                                    <view class="weui-label">学校名称</view>
+                                </view>
+                                <view class="weui-cell__bd">
+                                    <input name="school_name2" value="{{ form.school_name2 }}" class="weui-input" type="text" placeholder="请输入学校名称" />
+                                </view>
+                            </view>
+                            <view class="weui-cell weui-cell_input">
+                                <view class="weui-cell__hd">
+                                    <view class="weui-label">专业/班级</view>
+                                </view>
+                                <view class="weui-cell__bd">
+                                    <input name="major_class2" value="{{ form.major_class2 }}" class="weui-input" type="text" placeholder="请输入专业/班级" />
+                                </view>
+                            </view>
+                            <view class="weui-cell weui-cell_input">
+                                <view class="weui-cell__hd">
+                                    <view class="weui-label">所在行业</view>
+                                </view>
+                                <view class="weui-cell__bd">
+                                    <input name="industry2" value="{{ form.industry2 }}" class="weui-input" type="text" placeholder="请输入所在行业" />
+                                </view>
+                            </view>
+                        </view>
                     </swiper-item>
                 </swiper>
             </view>
-            <view class="button-sp-area">
+            <view class="weui-cells weui-cells_after-title" style="margin-top: 10px;">
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">曾参与义务服务</view>
+                    </view>
+                    <view class="weui-cell__bd" style="padding: 10px 0;">
+                        <radio-group class="radio-group" bindchange="bindIsdutyChange">
+                            <label class="radio" wx:for="{{is_duty}}">
+                                <radio name="is_duty" value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+                            </label>
+                        </radio-group>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">可服务时间</view>
+                    </view>
+                    <view class="weui-cell__bd" style="padding: 10px 0;">
+                        <radio-group class="radio-group" bindchange="bindIsdutyChange">
+                            <label class="radio" wx:for="{{service_time}}">
+                                <radio name="service_time" value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+                            </label>
+                        </radio-group>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">联系电话</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name="phone" value="{{ form.phone }}" class="weui-input" type="text" placeholder="请输入联系电话" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">现居住地址</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name="domicile" value="{{ form.domicile }}" class="weui-input" type="text" placeholder="区（县）/街道（镇）" />
+                    </view>
+                </view>
+            </view>
+            <view style="padding: 10px 0; text-align: center;">
+                <checkbox-group bindchange="checkboxChange">
+                    <label class="checkbox">
+                        <checkbox value="1" checked=""/>
+                    </label>
+                    <text bindtap="addVolunteerNotes" style="color: ＃43aaff;">已阅读并同意《志愿者须知》</text>
+                </checkbox-group>
+            </view>
+            <view class="button-sp-area" style="margin-top: 0px;">
                 <button class="weui-btn" type="primary" formType="submit">提交</button>
             </view>
         </form>

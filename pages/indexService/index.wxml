@@ -1,0 +1,72 @@
+<view class="page">
+    <view class="page__bd">
+        <form bindsubmit="submitForm">
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">预约服务</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker name="type" bindchange="bindEducationChange" value="{{ form.type}}" range="{{ type }}">
+                            <view class="weui-select weui-select_in-select-after" data-uuid=''>{{ type[form.type] }}</view>
+                        </picker>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cells__title" wx-if="{{form.type=='5'}}">请自行购买所需的零配件及相应工具</view>
+            <view class="weui-cells weui-cells_after-title" style="margin-top: 10px;">
+                <view class="weui-cell weui-cell_select" wx-if="{{form.type=='5'}}">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">预约类型</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker name="book_type" bindchange="bindEducationChange1" value="{{ form.book_type}}" range="{{ book_type }}">
+                            <view class="weui-select weui-select_in-select-after" data-uuid=''>{{ book_type[form.book_type] }}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">预约时间</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker mode="multiSelector" value="{{dateTime}}" bin
+                        dchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+                            <view class="weui-select weui-select_in-select-after">
+                                {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+                            </view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">联系电话</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name="phone" value="{{ form.phone }}" class="weui-input" type="text" placeholder="请输入联系电话" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">预约地点</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name="domicile" value="{{ form.domicile }}" class="weui-input" type="text" placeholder="请输入预约地点" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input" style="padding-top: 10px;">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">备注</view>
+                    </view>
+                </view>
+                <view class="" style="padding: 10px 15px;">
+                    <textarea style="border: 1px solid #e3393c; border-radius: 5px; padding: 10rpx; margin-left: -10rpx; font-size: 30rpx;" class="weui-textarea" name="phone" value="{{ form.phone }}" placeholder="请描述活动内容"></textarea>        
+                </view>
+            </view>
+            <view style="color: #999999; font-size: 20rpx; text-align: center; padding-top: 10px;">志愿队服务时间：09:00-12:00 14:00-19:00</view>
+            <view class="button-sp-area">
+                <button class="weui-btn" type="primary" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>

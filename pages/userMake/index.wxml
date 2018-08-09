@@ -1,0 +1,53 @@
+<view class="__userMake">
+    <view class="list">
+        <view>
+            <view>预约服务</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>预约上门时间</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>预约地点</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>联系方式</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>备注信息</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view class="text-green">预约成功</view>
+            <view class="btns"><text>评价</text></view>
+        </view>
+    </view>
+    <view class="list">
+        <view>
+            <view>预约服务</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>预约上门时间</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>预约地点</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>联系方式</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view>备注信息</view>
+            <view>管道维修</view>
+        </view>
+        <view>
+            <view class="text-red">预约成功</view>
+        </view>
+    </view>
+</view>

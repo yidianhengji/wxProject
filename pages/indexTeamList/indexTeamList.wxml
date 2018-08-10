@@ -13,26 +13,26 @@
                 <scroll-view scroll-y="true" class="scoll-h">
                     <view class="tabBox1">
                         <p>服务类型：
-                            <span>123</span>
+                            <span>{{dataListView.type_name}}</span>
                         </p>
                         <p>服务区域：
-                            <span>123</span>
+                            <span>社区</span>
                         </p>
                         <p>招募日期：
-                            <span>123</span>
+                            <span>{{dataListView.recruit_starttime+' 至 '+dataListView.recruit_endtime}}</span>
                         </p>
                         <p>服务日期：
-                            <span>123</span>
+                            <span>{{dataListView.service_time}}</span>
                         </p>
                         <p>加入方式：
-                            <span>123</span>
+                            <span>{{dataListView.join_type}}</span>
                         </p>
                         <p>成立时间：
-                            <span>123</span>
+                            <span>{{dataListView.create_time}}</span>
                         </p>
-                        <p>已加入志愿者：
+                        <!-- <p>已加入志愿者：
                             <span>123</span>
-                        </p>
+                        </p> -->
                     </view>
                     <view class="listBox">
                         <view class="listBox-hade">
@@ -40,11 +40,10 @@
                         </view>
                         <view class="listBox-body">
                             <view class="text">
-                                环保志愿者协会的工作目标是整合社会各界力量积极参与环保公益事业，在环保宣传、公益活动、生态实践等方面发挥生力军作用，着力打造常态化、有影响的环保志愿服务品牌，建设一支有责任感、有奉献精神、有专业技能的环保志愿者队伍，为环保事业提供可持续的环保志愿服务。
+                                {{dataListView.introduction}}
                             </view>
                         </view>
                     </view>
-
                 </scroll-view>
             </swiper-item>
             <swiper-item>
@@ -55,8 +54,8 @@
                                 <image class="img" src="../image/bg1.png"></image>
                             </view>
                             <view class="expertInfo">
-                                <view class="name">滨湖湘江之水保护公益活动,滨湖湘
-    江之水保护公益活动</view>
+                                <view class="name">滨湖湘江之水保护公益活动,滨湖湘 江之水保护公益活动
+                                </view>
                                 <view class="tag">
                                     <image class="img" src="../image/times.png"></image>
                                     知名情感博主
@@ -72,8 +71,8 @@
                                 <image class="img" src="../image/bg1.png"></image>
                             </view>
                             <view class="expertInfo">
-                                <view class="name">滨湖湘江之水保护公益活动,滨湖湘
-    江之水保护公益活动</view>
+                                <view class="name">滨湖湘江之水保护公益活动,滨湖湘 江之水保护公益活动
+                                </view>
                                 <view class="tag">
                                     <image class="img" src="../image/times.png"></image>
                                     知名情感博主
@@ -90,14 +89,16 @@
             <swiper-item>
                 <scroll-view scroll-y="true" class="scoll-h">
                     <view class="itemBox3">
-                        <view class="btnsAdd"><image src="../image/comment.png"></image>发表评论</view>
+                        <view class="btnsAdd">
+                            <image src="../image/comment.png"></image>发表评论</view>
                     </view>
                 </scroll-view>
             </swiper-item>
         </swiper>
     </view>
     <view class="btnBox">
-        <view bindtap="addService"><image src="../image/btnAddIcon.png"></image>预约服务</view>
+        <view bindtap="addService">
+            <image src="../image/btnAddIcon.png"></image>预约服务</view>
         <view bindtap="addVolunteer" class="addView">我要申请志愿者</view>
         <!-- <view bindtap="clickAddBtn" class="addView2">已结束</view> -->
         <!-- <view bindtap="clickAddBtn" class="addView3">暂未开始</view> -->

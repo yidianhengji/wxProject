@@ -7,6 +7,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        globalRoleData: '',
         //居民
         dataList1: [
             { name: '我的志愿队', icon: '1', path: '../MyVolunteer/MyVolunteer' },
@@ -44,7 +45,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        var app = getApp();
+        this.setData({
+            globalRoleData: app.globalData.globalRole
+        })
     },
 
     /**
@@ -58,7 +62,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        
     },
 
     /**

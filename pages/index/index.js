@@ -21,11 +21,14 @@ Page({
         //查询服务热线
         var _this = this;
         httpRequest.requestHeader("hotline/queryHotline.do", '', function (data) {
-            _this.data.phoneNumber = "" + data.data.phone+""
+            _this.setData({
+                phoneNumber: data.data.phone
+            })
         });
-
-        const app = getApp();
-        _this.data.globalRoleData = app.globalData.globalRole
+        var app = getApp();
+        _this.setData({
+            globalRoleData: app.globalData.globalRole
+        })
         
     },
     //页面跳转

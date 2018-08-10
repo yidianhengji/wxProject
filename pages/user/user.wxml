@@ -1,26 +1,66 @@
 <view class="userContainer">
-  <view class="bannerContainer">
-    <image src="../image/user/userBg.jpg"></image>
-    <view class="settingBtn">
-      <image src="../image/user/settingAddIcon.png"></image>
-      <image src="../image/user/settingIcon.png"></image>
+    <view class="bannerContainer">
+        <image src="../image/user/userBg.jpg"></image>
+        <view class="settingBtn">
+            <image wx:if="{{globalRoleData==2}}" src="../image/user/settingAddIcon.png"></image>
+            <image src="../image/user/settingIcon.png"></image>
+        </view>
+        <view class="userPhotoBox">
+            <image src="{{userInfoList.userInfo.avatarUrl}}"></image>
+            <text>{{userInfoList.userInfo.nickName}}</text>
+        </view>
     </view>
-    <view class="userPhotoBox">
-      <image src="{{userInfoList.userInfo.avatarUrl}}"></image>
-      <text>{{userInfoList.userInfo.nickName}}</text>
+    <view class="userList">
+        <ul>
+            <view wx:if="{{globalRoleData==1}}">
+                <li bindtap="clickIndexView" data-item-path="../MyVolunteer/MyVolunteer" data-item-title="我的志愿队">
+                    <image src="../image/user/icon1.png"></image> 我的志愿队
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../MyActivity/MyActivity" data-item-title="我的活动">
+                    <image src="../image/user/icon6.png"></image> 我的活动
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../userMake/index" data-item-title="我的预约">
+                    <image src="../image/user/icon3.png"></image> 我的预约
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../userNews/userNews" data-item-title="我的消息">
+                    <image src="../image/user/icon5.png"></image> 我的消息
+                </li>
+            </view>
+            <view wx:elif="{{globalRoleData==2}}">
+                <li bindtap="clickIndexView" data-item-path="../MyVolunteer/MyVolunteer" data-item-title="志愿队管理">
+                    <image src="../image/user/icon1.png"></image> 志愿队管理
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../MyActivity/MyActivity" data-item-title="活动管理">
+                    <image src="../image/user/icon6.png"></image> 活动管理
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../userMake/index" data-item-title="预约服务管理">
+                    <image src="../image/user/icon3.png"></image> 预约服务管理
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../userNews/userNews" data-item-title="我的消息">
+                    <image src="../image/user/icon5.png"></image> 我的消息
+                </li>
+            </view>
+            <view wx:elif="{{globalRoleData==3}}">
+                <li bindtap="clickIndexView" data-item-path="../MyVolunteer/MyVolunteer" data-item-title="志愿队管理">
+                    <image src="../image/user/icon1.png"></image> 志愿队管理
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../MyActivity/MyActivity" data-item-title="居民信息管理">
+                    <image src="../image/user/icon2.png"></image> 居民信息管理
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../userMake/index" data-item-title="预约服务管理">
+                    <image src="../image/user/icon3.png"></image> 预约服务管理
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../userMake/index" data-item-title="评价管理">
+                    <image src="../image/user/icon4.png"></image> 评价管理
+                </li>
+                <li bindtap="clickIndexView" data-item-path="../userNews/userNews" data-item-title="我的消息">
+                    <image src="../image/user/icon5.png"></image> 我的消息
+                </li>
+            </view>
+        </ul>
     </view>
-  </view>
-  <view class="userList">
-    <ul>
-      <li wx:for="{{dataList1}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-item-path="{{item.path}}" data-item-title="{{item.name}}">
-        <image src="../image/user/icon{{item.icon}}.png"></image>
-        {{item.name}}
-        <text wx-if="{{item.status}}">{{newsNum}}</text>
-      </li>
-    </ul>
-  </view>
-  <view class="telBox">
-    <text>滨湖社区服务热线</text>
-    <text>0731-77777777</text>
-  </view>
+    <view class="telBox">
+        <text>滨湖社区服务热线</text>
+        <text>0731-77777777</text>
+    </view>
 </view>

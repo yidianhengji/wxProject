@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/userMake/index",
+        
         "pages/login/login",
         "pages/indexTeamList/indexTeamList",
         "pages/MyEvaluate/MyEvaluate",
@@ -19,6 +19,7 @@
         "pages/indexAddVolunteer/indexAddVolunteer",
         "pages/indexAddNotes/index",
         "pages/indexService/index",
+        "pages/userMake/index",
         
         "pages/indexvolunteerList/indexvolunteerList"
     ],
